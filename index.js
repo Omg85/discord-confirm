@@ -1,0 +1,1 @@
+module.exports.confirmation = require('./confirmation');
