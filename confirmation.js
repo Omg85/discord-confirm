@@ -1,4 +1,4 @@
-async function confirmation(message, author, validReactions, time = 60000) {
+async function confirm(message, author, validReactions, time = 60000) {
     if(!message) throw new ReferenceError('discord-confirm => "message" is not defined')
     if(!validReactions || validReactions.length !== 2) throw new ReferenceError('discord-confirm => Invalid form body [validReactions]')
     if(typeof time !== "number") throw new SyntaxError('discord-confirm => typeof "time" must be a number')
@@ -13,4 +13,4 @@ async function confirmation(message, author, validReactions, time = 60000) {
       .then((collected) => collected.first() && collected.first().emoji.name);
 }
 
-module.exports = confirmation;
+module.exports = confirm;
